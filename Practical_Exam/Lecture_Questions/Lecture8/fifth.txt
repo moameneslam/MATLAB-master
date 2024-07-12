@@ -1,0 +1,9 @@
+Differrence between rem and mod:
+The concept of remainder after division is not uniquely defined, and the two functions mod and rem each compute a different variation. 
+The mod function produces a result that is either zero or has the same sign as the divisor. 
+The rem function produces a result that is either zero or has the same sign as the dividend.
+
+Another difference is the convention when the divisor is zero. 
+The mod function follows the convention that mod(a,0) returns a, whereas the rem function follows the convention that rem(a,0) returns NaN.
+
+Both variants have their uses. For example, in signal processing, the mod function is useful in the context of periodic signals because its output is periodic (with period equal to the divisor).

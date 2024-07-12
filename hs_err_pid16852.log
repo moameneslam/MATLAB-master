@@ -1,0 +1,261 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000007324c5d7, pid=16852, tid=35232
+#
+# JRE version: 6.0_17-b04
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (14.3-b01 mixed mode windows-amd64 )
+# Problematic frame:
+# C  [awt.dll+0xfc5d7]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000002db1d000):  JavaThread "Swing-Shell" daemon [_thread_in_native, id=35232, stack(0x0000000032550000,0x0000000032650000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000000000000
+
+Registers:
+EAX=0x0000000000000000, EBX=0x000000002db1d1b8, ECX=0xffffffffffffffff, EDX=0x0000000000000000
+ESP=0x000000003264f3a0, EBP=0x000000003264f578, ESI=0x0000000005a85cd8, EDI=0x0000000000000000
+EIP=0x000000007324c5d7, EFLAGS=0x0000000000010246
+
+Top of Stack: (sp=0x000000003264f3a0)
+0x000000003264f3a0:   00000000063a7fa8 0000000000000000
+0x000000003264f3b0:   000000003264f3c8 000000003264f410
+0x000000003264f3c0:   0000000000000000 0000000000000000
+0x000000003264f3d0:   000000003264f3d0 0000000078ce573d
+0x000000003264f3e0:   000000003264f448 00000000063ad448
+0x000000003264f3f0:   0000000006919740 00000000063a4090
+0x000000003264f400:   0000000000000000 00000000027e59ae
+0x000000003264f410:   0000000002370001 000000003264f4c0
+0x000000003264f420:   0000000000000000 00000000027f1a75
+0x000000003264f430:   0000000000000000 0000000000000000
+0x000000003264f440:   0000000000000048 0000000078bdf329
+0x000000003264f450:   0000000000000000 0000000000000001
+0x000000003264f460:   0000000000000000 0000000078bdf80a
+0x000000003264f470:   0000000000000000 0000000078bdfb3b
+0x000000003264f480:   000000003264f480 0000000000000000
+0x000000003264f490:   000000003264f508 0000000005979ce0 
+
+Instructions: (pc=0x000000007324c5d7)
+0x000000007324c5c7:   8b 54 24 28 33 c0 48 c7 c1 ff ff ff ff 48 8b fa
+0x000000007324c5d7:   66 f2 af 48 8b 03 48 f7 d1 44 8d 41 ff 48 8b cb 
+
+
+Stack: [0x0000000032550000,0x0000000032650000],  sp=0x000000003264f3a0,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [awt.dll+0xfc5d7]
+j  sun.awt.shell.Win32ShellFolder2.access$800(JJI)Ljava/lang/String;+4
+j  sun.awt.shell.Win32ShellFolder2$14.call()Ljava/lang/String;+15
+j  sun.awt.shell.Win32ShellFolder2$14.call()Ljava/lang/Object;+1
+j  java.util.concurrent.FutureTask$Sync.innerRun()V+30
+j  java.util.concurrent.FutureTask.run()V+4
+j  java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Ljava/lang/Runnable;)V+59
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+28
+j  sun.awt.shell.Win32ShellFolderManager2$ComInvoker$3.run()V+7
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.awt.shell.Win32ShellFolder2.getDisplayNameOf(JJI)Ljava/lang/String;+0
+j  sun.awt.shell.Win32ShellFolder2.access$800(JJI)Ljava/lang/String;+4
+j  sun.awt.shell.Win32ShellFolder2$14.call()Ljava/lang/String;+15
+j  sun.awt.shell.Win32ShellFolder2$14.call()Ljava/lang/Object;+1
+j  java.util.concurrent.FutureTask$Sync.innerRun()V+30
+j  java.util.concurrent.FutureTask.run()V+4
+j  java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Ljava/lang/Runnable;)V+59
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+28
+j  sun.awt.shell.Win32ShellFolderManager2$ComInvoker$3.run()V+7
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x000000002db1d000 JavaThread "Swing-Shell" daemon [_thread_in_native, id=35232, stack(0x0000000032550000,0x0000000032650000)]
+  0x000000002d877000 JavaThread "Image Fetcher 0" daemon [_thread_blocked, id=53808, stack(0x0000000031260000,0x0000000031360000)]
+  0x000000002da01000 JavaThread "TimerQueue" daemon [_thread_blocked, id=8480, stack(0x00000000306d0000,0x00000000307d0000)]
+  0x000000002d7ed000 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=12320, stack(0x000000002ee40000,0x000000002ef40000)]
+  0x000000002d9bd800 JavaThread "AWT-Windows" daemon [_thread_in_native, id=15820, stack(0x000000002e920000,0x000000002ea20000)]
+  0x000000002d9bd000 JavaThread "AWT-Shutdown" [_thread_blocked, id=30616, stack(0x000000002e820000,0x000000002e920000)]
+  0x000000002d7ba800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=43216, stack(0x000000002e720000,0x000000002e820000)]
+  0x000000002bd8e000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=41884, stack(0x000000002c4b0000,0x000000002c5b0000)]
+  0x000000002bd89800 JavaThread "CompilerThread1" daemon [_thread_blocked, id=18000, stack(0x000000002c3b0000,0x000000002c4b0000)]
+  0x000000002bd83800 JavaThread "CompilerThread0" daemon [_thread_blocked, id=4444, stack(0x000000002c2b0000,0x000000002c3b0000)]
+  0x000000002bd83000 JavaThread "Attach Listener" daemon [_thread_blocked, id=42316, stack(0x000000002c1b0000,0x000000002c2b0000)]
+  0x000000002bd82000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=39844, stack(0x000000002c0b0000,0x000000002c1b0000)]
+  0x000000002bd5c000 JavaThread "Finalizer" daemon [_thread_blocked, id=28964, stack(0x000000002bfb0000,0x000000002c0b0000)]
+  0x000000002bd57000 JavaThread "Reference Handler" daemon [_thread_blocked, id=7352, stack(0x000000002beb0000,0x000000002bfb0000)]
+  0x000000000223c800 JavaThread "main" [_thread_blocked, id=15728, stack(0x0000000000050000,0x0000000000150000)]
+
+Other Threads:
+  0x0000000002475800 VMThread [stack: 0x000000002bdb0000,0x000000002beb0000] [id=15204]
+  0x000000002bdad800 WatcherThread [stack: 0x000000002c5b0000,0x000000002c6b0000] [id=6528]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 12928K, used 11218K [0x0000000020200000, 0x0000000021180000, 0x000000002aca0000)
+  eden space 11520K, 85% used [0x0000000020200000,0x0000000020b98ae8,0x0000000020d40000)
+  from space 1408K, 98% used [0x0000000020f20000,0x000000002107bf38,0x0000000021080000)
+  to   space 1920K, 0% used [0x0000000020d40000,0x0000000020d40000,0x0000000020f20000)
+ PSOldGen        total 5312K, used 2178K [0x000000000aca0000, 0x000000000b1d0000, 0x0000000020200000)
+  object space 5312K, 41% used [0x000000000aca0000,0x000000000aec09f0,0x000000000b1d0000)
+ PSPermGen       total 21248K, used 17225K [0x00000000058a0000, 0x0000000006d60000, 0x000000000aca0000)
+  object space 21248K, 81% used [0x00000000058a0000,0x0000000006972798,0x0000000006d60000)
+
+Dynamic libraries:
+0x0000000140000000 - 0x0000000140019000 	C:\Program Files\MATLAB\R2013a\bin\win64\activate_matlab.exe
+0x00007ffa32ed0000 - 0x00007ffa330e7000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffa31800000 - 0x00007ffa318c4000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffa30580000 - 0x00007ffa30926000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffa2a860000 - 0x00007ffa2a8f7000 	C:\Windows\SYSTEM32\apphelp.dll
+0x00007ffa32360000 - 0x00007ffa3250d000 	C:\Windows\System32\USER32.dll
+0x00007ffa302d0000 - 0x00007ffa302f6000 	C:\Windows\System32\win32u.dll
+0x00007ffa32320000 - 0x00007ffa32349000 	C:\Windows\System32\GDI32.dll
+0x00007ffa30b10000 - 0x00007ffa30c28000 	C:\Windows\System32\gdi32full.dll
+0x00007ffa30420000 - 0x00007ffa304ba000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffa30300000 - 0x00007ffa30411000 	C:\Windows\System32\ucrtbase.dll
+0x0000000057b70000 - 0x0000000057c08000 	C:\Program Files\MATLAB\R2013a\bin\win64\MSVCP100.dll
+0x0000000057a90000 - 0x0000000057b62000 	C:\Program Files\MATLAB\R2013a\bin\win64\MSVCR100.dll
+0x0000000180000000 - 0x0000000180086000 	C:\Program Files\MATLAB\R2013a\bin\win64\java_launcher.dll
+0x00007ffa30e70000 - 0x00007ffa316c8000 	C:\Windows\System32\SHELL32.dll
+0x00007ffa32820000 - 0x00007ffa3287e000 	C:\Windows\System32\SHLWAPI.dll
+0x00007ffa32c10000 - 0x00007ffa32cb7000 	C:\Windows\System32\msvcrt.dll
+0x00007ffa26560000 - 0x00007ffa2656a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffa316d0000 - 0x00007ffa31701000 	C:\Windows\System32\IMM32.DLL
+0x00007ffa2a960000 - 0x00007ffa2aa0b000 	C:\Windows\system32\uxtheme.dll
+0x00007ffa32880000 - 0x00007ffa32c0a000 	C:\Windows\System32\combase.dll
+0x00007ffa318e0000 - 0x00007ffa319f7000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffa326d0000 - 0x00007ffa3281c000 	C:\Windows\System32\MSCTF.dll
+0x0000000078870000 - 0x0000000078ecd000 	C:\Program Files\MATLAB\R2013a\sys\java\jre\win64\jre\bin\server\jvm.dll
+0x00007ffa32cc0000 - 0x00007ffa32d70000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffa325a0000 - 0x00007ffa32646000 	C:\Windows\System32\sechost.dll
+0x00007ffa1c6e0000 - 0x00007ffa1c714000 	C:\Windows\SYSTEM32\WINMM.dll
+0x000000007a440000 - 0x000000007a44e000 	C:\Program Files\MATLAB\R2013a\sys\java\jre\win64\jre\bin\verify.dll
+0x000000007a070000 - 0x000000007a097000 	C:\Program Files\MATLAB\R2013a\sys\java\jre\win64\jre\bin\java.dll
+0x000000007a540000 - 0x000000007a54a000 	C:\Program Files\MATLAB\R2013a\sys\java\jre\win64\jre\bin\hpi.dll
+0x00007ffa32350000 - 0x00007ffa32358000 	C:\Windows\System32\PSAPI.DLL
+0x000000007a370000 - 0x000000007a382000 	C:\Program Files\MATLAB\R2013a\sys\java\jre\win64\jre\bin\zip.dll
+0x000000002e280000 - 0x000000002e28a000 	C:\Program Files\MATLAB\R2013a\bin\win64\nativewebproxy.dll
+0x00007ffa277d0000 - 0x00007ffa27907000 	C:\Windows\SYSTEM32\WINHTTP.dll
+0x00007ffa2ed80000 - 0x00007ffa2edad000 	C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x00007ffa32310000 - 0x00007ffa32319000 	C:\Windows\System32\NSI.dll
+0x00007ffa27580000 - 0x00007ffa27599000 	C:\Windows\SYSTEM32\dhcpcsvc6.DLL
+0x00007ffa274f0000 - 0x00007ffa2750f000 	C:\Windows\SYSTEM32\dhcpcsvc.DLL
+0x00007ffa321e0000 - 0x00007ffa32251000 	C:\Windows\System32\WS2_32.dll
+0x00007ffa2f7b0000 - 0x00007ffa2f819000 	C:\Windows\system32\mswsock.dll
+0x00007ffa2edb0000 - 0x00007ffa2eea9000 	C:\Windows\SYSTEM32\DNSAPI.dll
+0x00007ffa27570000 - 0x00007ffa2757a000 	C:\Windows\System32\rasadhlp.dll
+0x0000000073150000 - 0x0000000073311000 	C:\Program Files\MATLAB\R2013a\sys\java\jre\win64\jre\bin\awt.dll
+0x00007ffa31bc0000 - 0x00007ffa31d5f000 	C:\Windows\System32\ole32.dll
+0x00007ff9fdf30000 - 0x00007ff9fdfcf000 	C:\Windows\SYSTEM32\WINSPOOL.DRV
+0x00007ffa32d90000 - 0x00007ffa32e83000 	C:\Windows\System32\shcore.dll
+0x00007ffa03460000 - 0x00007ffa03513000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.22621.608_none_fb280a3c7926c2cc\comctl32.dll
+0x00007ffa2abd0000 - 0x00007ffa2abfb000 	C:\Windows\SYSTEM32\DWMAPI.DLL
+0x0000000075b90000 - 0x0000000075bfb000 	C:\Program Files\MATLAB\R2013a\sys\java\jre\win64\jre\bin\fontmanager.dll
+0x000000007a230000 - 0x000000007a247000 	C:\Program Files\MATLAB\R2013a\sys\java\jre\win64\jre\bin\net.dll
+0x000000007a500000 - 0x000000007a50b000 	C:\Program Files\MATLAB\R2013a\sys\java\jre\win64\jre\bin\nio.dll
+0x00007ffa2f2a0000 - 0x00007ffa2f2b8000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffa30250000 - 0x00007ffa302ca000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffa2d5c0000 - 0x00007ffa2d5f6000 	C:\Windows\SYSTEM32\dxcore.dll
+0x00000000734e0000 - 0x0000000073643000 	C:\Program Files\MATLAB\R2013a\bin\win64\instutil.dll
+0x00007ffa30c30000 - 0x00007ffa30d29000 	C:\Windows\System32\COMDLG32.dll
+0x00007ffa31720000 - 0x00007ffa317f7000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ffa10220000 - 0x00007ffa10239000 	C:\Windows\SYSTEM32\NETAPI32.dll
+0x00007ffa2d5b0000 - 0x00007ffa2d5bd000 	C:\Windows\SYSTEM32\WINNSI.DLL
+0x000000002f140000 - 0x000000002f143000 	C:\Windows\SYSTEM32\icmp.Dll
+0x00007ffa040a0000 - 0x00007ffa040b7000 	C:\Windows\system32\napinsp.dll
+0x00007ffa04080000 - 0x00007ffa0409b000 	C:\Windows\system32\pnrpnsp.dll
+0x00007ffa04060000 - 0x00007ffa04071000 	C:\Windows\System32\winrnr.dll
+0x00007ffa267c0000 - 0x00007ffa267d5000 	C:\Windows\system32\wshbth.dll
+0x00007ffa04030000 - 0x00007ffa04051000 	C:\Windows\system32\nlansp_c.dll
+0x0000000057c10000 - 0x0000000057c36000 	C:\Program Files\Bonjour\mdnsNSP.dll
+0x00007ffa266d0000 - 0x00007ffa26754000 	C:\Windows\System32\fwpuclnt.dll
+0x00007ffa32260000 - 0x00007ffa32310000 	C:\Windows\System32\clbcatq.dll
+0x00007ffa1b020000 - 0x00007ffa1b07e000 	C:\Windows\system32\dataexchange.dll
+0x00007ffa1fb30000 - 0x00007ffa1fdb5000 	C:\Windows\system32\twinapi.appcore.dll
+0x00007ffa18370000 - 0x00007ffa184ba000 	C:\Windows\SYSTEM32\textinputframework.dll
+0x00007ff9fdec0000 - 0x00007ff9fdf29000 	C:\Windows\system32\Oleacc.dll
+0x00007ffa2a580000 - 0x00007ffa2a6b3000 	C:\Windows\SYSTEM32\CoreMessaging.dll
+0x00007ffa1f520000 - 0x00007ffa1f88c000 	C:\Windows\SYSTEM32\CoreUIComponents.dll
+0x00007ffa2e030000 - 0x00007ffa2e16e000 	C:\Windows\SYSTEM32\wintypes.dll
+0x00007ffa2fab0000 - 0x00007ffa2fabc000 	C:\Windows\SYSTEM32\CRYPTBASE.DLL
+0x00007ffa2e170000 - 0x00007ffa2ea62000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x00007ffa2ff40000 - 0x00007ffa2ff8e000 	C:\Windows\SYSTEM32\CFGMGR32.dll
+0x00007ffa285e0000 - 0x00007ffa286e1000 	C:\Windows\system32\propsys.dll
+0x00007ff9f5ab0000 - 0x00007ff9f5b55000 	C:\Windows\System32\Windows.FileExplorer.Common.dll
+0x00007ffa30180000 - 0x00007ffa301a6000 	C:\Windows\SYSTEM32\profapi.dll
+0x00007ff9f4780000 - 0x00007ff9f479a000 	C:\Windows\system32\NetworkExplorer.dll
+0x00007ffa0b5d0000 - 0x00007ffa0b863000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2361_none_2712ced57382f843\comctl32.dll
+0x00007ffa29af0000 - 0x00007ffa29ca0000 	C:\Windows\SYSTEM32\WindowsCodecs.dll
+0x00007ff9de2c0000 - 0x00007ff9de32b000 	C:\Windows\System32\thumbcache.dll
+0x00007ffa24110000 - 0x00007ffa24300000 	C:\Windows\System32\urlmon.dll
+0x00007ffa2ec90000 - 0x00007ffa2ec9c000 	C:\Windows\System32\netutils.dll
+0x00007ffa23e50000 - 0x00007ffa2410c000 	C:\Windows\System32\iertutil.dll
+0x00007ffa256e0000 - 0x00007ffa25709000 	C:\Windows\System32\srvcli.dll
+0x00007ffa2f5a0000 - 0x00007ffa2f5e2000 	C:\Windows\System32\SspiCli.dll
+0x00007ffa25770000 - 0x00007ffa2578e000 	C:\Windows\SYSTEM32\MPR.dll
+0x00007ff9f1590000 - 0x00007ff9f15b9000 	C:\Windows\System32\p9np.dll
+0x00007ffa19b20000 - 0x00007ffa19b2c000 	C:\Windows\System32\drprov.dll
+0x00007ff9ff3e0000 - 0x00007ff9ff3f9000 	C:\Windows\System32\ntlanman.dll
+0x00007ff9f4bc0000 - 0x00007ff9f4bdf000 	C:\Windows\System32\davclnt.dll
+0x00007ffa2ed10000 - 0x00007ffa2ed76000 	C:\Windows\System32\WINSTA.dll
+0x00007ffa27510000 - 0x00007ffa2752b000 	C:\Windows\System32\wkscli.dll
+0x00007ffa07210000 - 0x00007ffa07222000 	C:\Windows\SYSTEM32\cscapi.dll
+0x00007ff98bf90000 - 0x00007ff98bfe6000 	C:\Windows\System32\dlnashext.dll
+0x00007ffa18a60000 - 0x00007ffa18ac9000 	C:\Windows\System32\PlayToDevice.dll
+0x00007ffa17e00000 - 0x00007ffa17e21000 	C:\Windows\System32\DevDispItemProvider.dll
+0x00007ffa12980000 - 0x00007ffa12a1d000 	C:\Windows\System32\MMDevApi.dll
+0x00007ffa2ff10000 - 0x00007ffa2ff3c000 	C:\Windows\System32\DEVOBJ.dll
+0x00007ff9e44d0000 - 0x00007ff9e4571000 	C:\Windows\system32\wpdshext.dll
+0x00007ff9fdfd0000 - 0x00007ff9fe189000 	C:\Windows\WinSxS\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.22621.1778_none_57fe2016ce1542ec\gdiplus.dll
+0x00007ffa26610000 - 0x00007ffa266ae000 	C:\Windows\System32\PortableDeviceApi.dll
+0x00007ffa31d60000 - 0x00007ffa321d4000 	C:\Windows\System32\SETUPAPI.dll
+0x00007ffa30aa0000 - 0x00007ffa30b0c000 	C:\Windows\System32\WINTRUST.dll
+0x00007ffa30930000 - 0x00007ffa30a96000 	C:\Windows\System32\CRYPT32.dll
+0x00007ffa2fef0000 - 0x00007ffa2ff02000 	C:\Windows\SYSTEM32\MSASN1.dll
+0x00007ffa25190000 - 0x00007ffa251c1000 	C:\Windows\System32\PortableDeviceTypes.dll
+0x00007ffa1afa0000 - 0x00007ffa1afd7000 	C:\Windows\System32\EhStorShell.dll
+0x00007ffa19b30000 - 0x00007ffa19b54000 	C:\Windows\System32\EhStorAPI.dll
+0x00007ffa2f0a0000 - 0x00007ffa2f0b4000 	C:\Windows\System32\WTSAPI32.dll
+0x00007ffa266c0000 - 0x00007ffa266cd000 	C:\Windows\SYSTEM32\LINKINFO.dll
+0x00007ffa23750000 - 0x00007ffa23885000 	C:\Windows\System32\Windows.System.Launcher.dll
+0x00007ffa28490000 - 0x00007ffa28523000 	C:\Windows\System32\msvcp110_win.dll
+0x00007ffa24920000 - 0x00007ffa2493a000 	C:\Windows\SYSTEM32\windows.staterepositorycore.dll
+0x00007ffa2f120000 - 0x00007ffa2f12c000 	C:\Windows\SYSTEM32\Secur32.dll
+
+VM Arguments:
+jvm_args: -Djava.ext.dirs=C:\Program Files\MATLAB\R2013a\sys\java\jre\win64\jre\lib\ext;C:\Program Files\MATLAB\R2013a\java\jar;C:\Program Files\MATLAB\R2013a\java\jar\cmlink;C:\Program Files\MATLAB\R2013a\java\jar\help;C:\Program Files\MATLAB\R2013a\java\jar\ja_JP;C:\Program Files\MATLAB\R2013a\java\jar\org;C:\Program Files\MATLAB\R2013a\java\jar\physmod;C:\Program Files\MATLAB\R2013a\java\jar\project;C:\Program Files\MATLAB\R2013a\java\jar\toolbox;C:\Program Files\MATLAB\R2013a\java\jar\zh_CN;C:\Program Files\MATLAB\R2013a\java\jarext;C:\Program Files\MATLAB\R2013a\java\jarext\axis2;C:\Program Files\MATLAB\R2013a\java\jarext\chilkat;C:\Program Files\MATLAB\R2013a\java\jarext\connector;C:\Program Files\MATLAB\R2013a\java\jarext\connector_api;C:\Program Files\MATLAB\R2013a\java\jarext\distcomp;C:\Program Files\MATLAB\R2013a\java\jarext\geotools;C:\Program Files\MATLAB\R2013a\java\jarext\guice;C:\Program Files\MATLAB\R2013a\java\jarext\ice;C:\Program Files\MATLAB\R2013a\java\jarext\jide;C:\Program Files\MATLAB\R2013a\java\jarext\jung;C:\Program Files\MATLAB\R2013a\java\jarext\jxbrowser;C:\Program Files\MATLAB\R2013a\java\jarext\saxon9.notices;C:\Program Files\MATLAB\R2013a\java\jarext\sqlite4java;C:\Program Files\MATLAB\R2013a\java\jarext\svnkit;C:\Program Files\MATLAB\R2013a\java\jarext\webservices; vfprintf -Xmx512m 
+java_command: <unknown>
+Launcher Type: generic
+
+Environment Variables:
+PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\MATLAB\R2013a\runtime\win64;C:\Program Files\MATLAB\R2013a\bin;C:\Users\Moamen Eslam\AppData\Local\Microsoft\WindowsApps;C:\Users\Moamen Eslam\AppData\Local\Programs\Microsoft VS Code\bin
+USERNAME=Moamen Eslam
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 141 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.2 Build 9200 
+
+CPU:total 16 (8 cores per cpu, 2 threads per core) family 6 model 141 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, ht
+
+Memory: 4k page, physical 16497444k(3810696k free), swap 32994888k(13270108k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (14.3-b01) for windows-amd64 JRE (1.6.0_17-b04), built on Oct 11 2009 00:46:08 by "java_re" with MS VC++ 8.0
+
+time: Fri Oct 13 17:02:17 2023
+elapsed time: 10 seconds
+
